@@ -1,19 +1,15 @@
 package org.elasticsearch.index.analysis;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.instanceOf;
+
+import java.io.IOException;
 import org.elasticsearch.common.settings.Settings;
 import org.elasticsearch.index.Index;
 import org.elasticsearch.plugin.analysis.arirang.AnalysisArirangPlugin;
-import org.elasticsearch.test.ESIntegTestCase;
 import org.elasticsearch.test.ESTestCase;
-import org.elasticsearch.test.ESTestCase.TestAnalysis;
-import org.hamcrest.MatcherAssert;
 import org.junit.Ignore;
 import org.junit.Test;
-
-import java.io.IOException;
-
-import static org.elasticsearch.test.ESTestCase.createTestAnalysis;
-import static org.hamcrest.Matchers.instanceOf;
 
 /**
  * Created by hwjeong on 2015. 11. 3..
