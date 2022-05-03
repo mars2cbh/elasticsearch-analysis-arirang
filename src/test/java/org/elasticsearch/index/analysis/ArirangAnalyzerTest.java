@@ -24,9 +24,13 @@ public class ArirangAnalyzerTest {
   public String query = "[한국 엘라스틱서치 사용자 그룹의 HENRY 입니다.";
 
   public void testArirangAnalyzerNamedAnalyzer() throws Exception {
+
     System.out.println("####### testArirangAnalyzerNamedAnalyzer #######");
+
+    Settings settings = Settings.builder().build();
+
     final TestAnalysis analysisService = createTestAnalysis(new Index("test", "_na_"), Settings.EMPTY,
-      new AnalysisArirangPlugin());
+      new AnalysisArirangPlugin(settings));
 
 //    IndexAnalyzers indexAnalyzers = analysis.indexAnalyzers;
 //    NamedAnalyzer analyzer = indexAnalyzers.get("kuromoji");
@@ -53,8 +57,11 @@ public class ArirangAnalyzerTest {
 
   public void testArirangAnalyzerTokenFilter() throws Exception {
     System.out.println("####### testArirangAnalyzerTokenFilter #######");
+
+    Settings settings = Settings.builder().build();
+
     final TestAnalysis analysisService = createTestAnalysis(new Index("test", "_na_"), Settings.EMPTY,
-      new AnalysisArirangPlugin());
+      new AnalysisArirangPlugin(settings));
 
     TokenizerFactory tokenizerFactory = analysisService.tokenizer.get("arirang_tokenizer");
     TokenFilterFactory tokenFilter = analysisService.tokenFilter.get("arirang_filter");
@@ -82,8 +89,10 @@ public class ArirangAnalyzerTest {
   public void testArirangCustomAnalyzer() throws Exception {
     System.out.println("####### testArirangCustomAnalyzer #######");
 
+    Settings settings = Settings.builder().build();
+
     final TestAnalysis analysisService = createTestAnalysis(new Index("test", "_na_"), Settings.EMPTY,
-      new AnalysisArirangPlugin());
+      new AnalysisArirangPlugin(settings));
 
     TokenizerFactory tokenizerFactory = analysisService.tokenizer.get("arirang_tokenizer");
     TokenFilterFactory tokenFilter = analysisService.tokenFilter.get("arirang_filter");

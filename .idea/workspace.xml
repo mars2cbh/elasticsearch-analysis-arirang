@@ -23,7 +23,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="65a3c343-2a41-4a50-a960-2a94a96c4bfd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/elasticsearch/plugin/analysis/arirang/ArirangSettings.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/elasticsearch/rest/action/analysis/ArirangAnalyzerRestInfoAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/arirang.morph/src/main/java/org/apache/lucene/analysis/ko/utils/eclipse.sublime-project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/arirang.morph/src/main/java/org/apache/lucene/analysis/ko/utils/eclipse.sublime-workspace" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/assemblies/plugin.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/elasticsearch/plugin/analysis/arirang/AnalysisArirangPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/elasticsearch/plugin/analysis/arirang/AnalysisArirangPlugin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/elasticsearch/rest/action/analysis/ArirangAnalyzerRestAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/elasticsearch/rest/action/analysis/ArirangAnalyzerRestReloadAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/elasticsearch/rest/action/analysis/ArirangAnalyzerRestHandlerPlugin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/elasticsearch/index/analysis/ArirangAnalysisTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/elasticsearch/index/analysis/ArirangAnalysisTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/elasticsearch/index/analysis/ArirangAnalyzerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/elasticsearch/index/analysis/ArirangAnalyzerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,16 +120,12 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="gradle" />
-                    <option name="lastUsedInstant" value="1651497209" />
+                    <option name="branchName" value="s3" />
+                    <option name="lastUsedInstant" value="1651498786" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="8.1.3" />
-                    <option name="lastUsedInstant" value="1651497149" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="8.0.0" />
-                    <option name="lastUsedInstant" value="1651148936" />
+                    <option name="lastUsedInstant" value="1651497951" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="master" />
@@ -145,13 +152,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/mars1/IdeaProjects/elasticsearch-analysis-arirang",
-    "nodejs_package_manager_path": "npm"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/mars1/IdeaProjects/elasticsearch-analysis-arirang&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -160,6 +167,9 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/lib" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.elasticsearch.rest.action.analysis" />
     </key>
   </component>
   <component name="RunManager" selected="Gradle.elasticsearch-analysis-arirang [package]">
@@ -278,8 +288,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.elasticsearch-analysis-arirang [package]" />
-        <item itemvalue="Gradle.elasticsearch-analysis-arirang [build]" />
         <item itemvalue="Gradle.elasticsearch-analysis-arirang [clean]" />
+        <item itemvalue="Gradle.elasticsearch-analysis-arirang [build]" />
         <item itemvalue="Gradle.elasticsearch-analysis-arirang [processResources]" />
         <item itemvalue="Gradle.elasticsearch-analysis-arirang [processDescriptor]" />
       </list>
@@ -301,7 +311,8 @@
       <workItem from="1651382448344" duration="2089000" />
       <workItem from="1651409285882" duration="729000" />
       <workItem from="1651410020415" duration="6788000" />
-      <workItem from="1651417670592" duration="7470000" />
+      <workItem from="1651417670592" duration="11394000" />
+      <workItem from="1651502163832" duration="6306000" />
     </task>
     <task id="LOCAL-00001" summary="elasticsearch 7.8.0 &amp; lucene 8.5.1">
       <created>1592974906427</created>
@@ -429,7 +440,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651497881713</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="add support elasticsearch 8.1.3 and convert to gradle.">
+      <created>1651498013264</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1651498013264</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -456,7 +474,8 @@
     <MESSAGE value="add module to project." />
     <MESSAGE value="- change maven to gradle.&#10;- add support elasticsearch 8.1.3" />
     <MESSAGE value="add README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="add README.md" />
+    <MESSAGE value="add support elasticsearch 8.1.3 and convert to gradle." />
+    <option name="LAST_COMMIT_MESSAGE" value="add support elasticsearch 8.1.3 and convert to gradle." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

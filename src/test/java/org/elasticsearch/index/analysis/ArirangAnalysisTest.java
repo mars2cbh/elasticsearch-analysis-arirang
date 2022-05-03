@@ -5,6 +5,7 @@ import static org.hamcrest.Matchers.instanceOf;
 
 import java.io.IOException;
 import org.elasticsearch.common.settings.Settings;
+import org.elasticsearch.common.settings.Settings.Builder;
 import org.elasticsearch.index.Index;
 import org.elasticsearch.plugin.analysis.arirang.AnalysisArirangPlugin;
 import org.elasticsearch.test.ESTestCase;
@@ -23,7 +24,10 @@ public class ArirangAnalysisTest extends ESTestCase {
 
   @Ignore
   public void testArirangAnalysis() throws IOException {
-    final TestAnalysis analysisService = createTestAnalysis(new Index("test", "_na_"), Settings.EMPTY, new AnalysisArirangPlugin());
+
+    Settings settings = Settings.builder().build();
+
+    final TestAnalysis analysisService = createTestAnalysis(new Index("test", "_na_"), Settings.EMPTY, new AnalysisArirangPlugin(settings));
     TokenizerFactory tokenizerFactory = analysisService.tokenizer.get("arirang_tokenizer");
     assertThat(tokenizerFactory, instanceOf(ArirangTokenizerFactory.class));
   }
