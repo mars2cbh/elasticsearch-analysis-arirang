@@ -26,7 +26,6 @@ import java.util.Map;
 import org.apache.lucene.analysis.CharacterUtils;
 import org.apache.lucene.analysis.Tokenizer;
 import org.apache.lucene.analysis.ko.morph.MorphException;
-import org.apache.lucene.analysis.ko.utils.DictionaryUtil;
 import org.apache.lucene.analysis.ko.utils.SyllableUtil;
 import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
 import org.apache.lucene.analysis.tokenattributes.OffsetAttribute;
@@ -45,7 +44,7 @@ public final class KoreanTokenizer extends Tokenizer {
     //MGK_DEL ]
     private final CharacterUtils.CharacterBuffer ioBuffer = CharacterUtils.newCharacterBuffer(IO_BUFFER_SIZE);
 
-    private static Map<Integer,Integer> pairmap = new HashMap<Integer,Integer>();
+    private static Map<Integer,Integer> pairmap = new HashMap<>();
 
     static {
         pairmap.put(34,34);// ""
@@ -86,7 +85,7 @@ public final class KoreanTokenizer extends Tokenizer {
     }
 
     @Override
-    public final boolean incrementToken() throws IOException {
+    public boolean incrementToken() throws IOException {
 
         clearAttributes();
         char[] buffer = termAtt.buffer();
@@ -129,9 +128,7 @@ public final class KoreanTokenizer extends Tokenizer {
             
             int closechar = getPairChar(c);
            
-            if(closechar!=0 && 
-            		(pairstack.isEmpty() || 
-            				(!pairstack.isEmpty() && pairstack.get(0)!=c))) {
+            if(closechar != 0 && (pairstack.isEmpty() || pairstack.get(0) != c)) {
             	if(start==-1) {
             		start=offset + bufferIndex - charCount;
             		end=start;
@@ -231,10 +228,7 @@ public final class KoreanTokenizer extends Tokenizer {
 				//MGK_CHG ]
 				
 				if(space_c==32) { // 32 is space ascii code
-					if(i==start)
-						return true;
-					else
-						return false;
+          return i == start;
 				}
 				
 				char[] feature =  SyllableUtil.getFeature((char)space_c);

@@ -1,14 +1,14 @@
 package org.elasticsearch.index.analysis;
 
-import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.instanceOf;
 
 import java.io.IOException;
 import org.elasticsearch.common.settings.Settings;
-import org.elasticsearch.common.settings.Settings.Builder;
 import org.elasticsearch.index.Index;
 import org.elasticsearch.plugin.analysis.arirang.AnalysisArirangPlugin;
+import org.elasticsearch.plugin.analysis.arirang.ArirangTokenizerFactory;
 import org.elasticsearch.test.ESTestCase;
+import org.hamcrest.MatcherAssert;
 import org.junit.Ignore;
 import org.junit.Test;
 
@@ -29,6 +29,6 @@ public class ArirangAnalysisTest extends ESTestCase {
 
     final TestAnalysis analysisService = createTestAnalysis(new Index("test", "_na_"), Settings.EMPTY, new AnalysisArirangPlugin(settings));
     TokenizerFactory tokenizerFactory = analysisService.tokenizer.get("arirang_tokenizer");
-    assertThat(tokenizerFactory, instanceOf(ArirangTokenizerFactory.class));
+    MatcherAssert.assertThat(tokenizerFactory, instanceOf(ArirangTokenizerFactory.class));
   }
 }

@@ -346,8 +346,7 @@ public final class KoreanFilter extends TokenFilter {
 						startoffset + offset, inc));
 				offset += text.length();
 			} else {
-				String text = input.substring(offset,
-						offset + 2 > strlen ? strlen : offset + 2);
+				String text = input.substring(offset, Math.min(offset + 2, strlen));
 				map.put(position + ":" + text, new KoreanToken(text,
 						startoffset + offset, inc));
 				offset++;

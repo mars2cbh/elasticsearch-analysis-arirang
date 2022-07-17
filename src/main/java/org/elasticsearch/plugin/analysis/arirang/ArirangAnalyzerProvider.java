@@ -1,4 +1,4 @@
-package org.elasticsearch.index.analysis;
+package org.elasticsearch.plugin.analysis.arirang;
 
 import org.apache.lucene.analysis.ko.KoreanAnalyzer;
 import org.elasticsearch.common.settings.Settings;
@@ -6,6 +6,7 @@ import org.elasticsearch.env.Environment;
 import org.elasticsearch.index.IndexSettings;
 
 import java.io.IOException;
+import org.elasticsearch.index.analysis.AbstractIndexAnalyzerProvider;
 
 public class ArirangAnalyzerProvider extends AbstractIndexAnalyzerProvider<KoreanAnalyzer> {
 

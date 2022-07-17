@@ -1,4 +1,4 @@
-package org.elasticsearch.rest.action.analysis;
+package org.elasticsearch.plugin.analysis.arirang;
 
 import static org.elasticsearch.rest.RestRequest.Method.GET;
 import static org.elasticsearch.rest.RestRequest.Method.POST;
@@ -34,7 +34,6 @@ public class ArirangAnalyzerRestReloadAction extends BaseRestHandler {
       DictionaryUtil.loadDictionary();
     } catch (MorphException me) {
       return channel -> channel.sendResponse(new BytesRestResponse(RestStatus.NOT_ACCEPTABLE, "Failed which reload arirang analyzer dictionary!!"));
-    } finally {
     }
 
     return channel -> channel.sendResponse(new BytesRestResponse(RestStatus.OK, "Reloaded arirang analyzer dictionary!!"));
