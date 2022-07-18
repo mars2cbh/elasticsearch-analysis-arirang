@@ -1,0 +1,11 @@
+grant {
+  permission java.lang.RuntimePermission "accessDeclaredMembers";
+  permission java.lang.RuntimePermission "getClassLoader";
+  permission java.lang.reflect.ReflectPermission "suppressAccessChecks";
+  permission java.net.SocketPermission "*", "connect";
+  permission java.io.FilePermission "${user.home}/.aws/*", "read";
+  permission javax.management.MBeanTrustPermission "register";
+  permission javax.management.MBeanServerPermission "findMBeanServer";
+  permission javax.management.MBeanServerPermission "createMBeanServer";
+  permission javax.management.MBeanPermission "*", "registerMBean";
+};

@@ -22,23 +22,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="65a3c343-2a41-4a50-a960-2a94a96c4bfd" name="Default Changelist" comment="arirang config setting added.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/elasticsearch/plugin/analysis/arirang/ArirangSynonymFilterFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="65a3c343-2a41-4a50-a960-2a94a96c4bfd" name="Default Changelist" comment="adding synonym filter.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/elasticsearch/plugin/analysis/arirang/synonym/S3SynonymFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/elasticsearch/plugin/analysis/arirang/synonym/SynonymFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/plugin-security.policy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/arirang-analyzer-6/src/main/java/org/apache/lucene/analysis/ko/KoreanFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/arirang-analyzer-6/src/main/java/org/apache/lucene/analysis/ko/KoreanFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/arirang-analyzer-6/src/main/java/org/apache/lucene/analysis/ko/KoreanTokenizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/arirang-analyzer-6/src/main/java/org/apache/lucene/analysis/ko/KoreanTokenizer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/arirang.morph/src/main/java/org/apache/lucene/analysis/ko/utils/ConstraintUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/arirang.morph/src/main/java/org/apache/lucene/analysis/ko/utils/ConstraintUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/arirang.morph/src/main/java/org/apache/lucene/analysis/ko/utils/DictionaryUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/arirang.morph/src/main/java/org/apache/lucene/analysis/ko/utils/DictionaryUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/elasticsearch/index/analysis/ArirangAnalyzerProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/elasticsearch/plugin/analysis/arirang/ArirangAnalyzerProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/elasticsearch/index/analysis/ArirangTokenFilterFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/elasticsearch/plugin/analysis/arirang/ArirangTokenFilterFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/elasticsearch/index/analysis/ArirangTokenizerFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/elasticsearch/plugin/analysis/arirang/ArirangTokenizerFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/elasticsearch/plugin/analysis/arirang/AnalysisArirangPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/elasticsearch/plugin/analysis/arirang/AnalysisArirangPlugin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/elasticsearch/plugin/analysis/arirang/ArirangSettings.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/elasticsearch/rest/action/analysis/ArirangAnalyzerRestInfoAction.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/elasticsearch/rest/action/analysis/ArirangAnalyzerRestReloadAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/elasticsearch/plugin/analysis/arirang/ArirangAnalyzerRestReloadAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/elasticsearch/index/analysis/ArirangAnalysisTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/elasticsearch/index/analysis/ArirangAnalysisTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/elasticsearch/plugin/analysis/arirang/ArirangSynonymFilterFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/elasticsearch/plugin/analysis/arirang/ArirangSynonymFilterFactory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,15 +148,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/mars1/IdeaProjects/elasticsearch-analysis-arirang&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "last_opened_file_path": "/Users/mars1/IdeaProjects/elasticsearch-analysis-arirang",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -200,29 +194,6 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;org.elasticsearch.plugin.analysis.arirang.AwsS3ProviderTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="AwsS3ProviderTest.dnTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;org.elasticsearch.plugin.analysis.arirang.AwsS3ProviderTest.dnTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -274,6 +245,27 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="elasticsearch-analysis-arirang [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="jar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="elasticsearch-analysis-arirang [package]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -296,8 +288,8 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Gradle.elasticsearch-analysis-arirang [jar]" />
       <item itemvalue="Gradle.AwsS3ProviderTest" />
-      <item itemvalue="Gradle.AwsS3ProviderTest.dnTest" />
       <item itemvalue="Gradle.elasticsearch-analysis-arirang [package]" />
       <item itemvalue="Gradle.elasticsearch-analysis-arirang [clean]" />
       <item itemvalue="Gradle.elasticsearch-analysis-arirang [build]" />
@@ -306,9 +298,9 @@
       <list>
         <item itemvalue="Gradle.elasticsearch-analysis-arirang [package]" />
         <item itemvalue="Gradle.elasticsearch-analysis-arirang [build]" />
-        <item itemvalue="Gradle.AwsS3ProviderTest" />
         <item itemvalue="Gradle.elasticsearch-analysis-arirang [clean]" />
-        <item itemvalue="Gradle.AwsS3ProviderTest.dnTest" />
+        <item itemvalue="Gradle.elasticsearch-analysis-arirang [jar]" />
+        <item itemvalue="Gradle.AwsS3ProviderTest" />
       </list>
     </recent_temporary>
   </component>
@@ -341,7 +333,7 @@
       <workItem from="1654004336388" duration="2670000" />
       <workItem from="1654775896908" duration="818000" />
       <workItem from="1656773420002" duration="6502000" />
-      <workItem from="1657943853019" duration="16626000" />
+      <workItem from="1657943853019" duration="38263000" />
     </task>
     <task id="LOCAL-00001" summary="elasticsearch 7.8.0 &amp; lucene 8.5.1">
       <created>1592974906427</created>
@@ -483,7 +475,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651580480959</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="adding synonym filter.">
+      <created>1658029703850</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1658029703850</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -512,7 +511,8 @@
     <MESSAGE value="add README.md" />
     <MESSAGE value="add support elasticsearch 8.1.3 and convert to gradle." />
     <MESSAGE value="arirang config setting added." />
-    <option name="LAST_COMMIT_MESSAGE" value="arirang config setting added." />
+    <MESSAGE value="adding synonym filter." />
+    <option name="LAST_COMMIT_MESSAGE" value="adding synonym filter." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
